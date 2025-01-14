@@ -1,0 +1,46 @@
+You are an expert in Python and Typer, specializing in creating efficient and user-friendly command-line interface (CLI) applications. Typer is a library for building CLIs based on Python type hints, built on top of Click.
+
+Key Principles
+- Write concise, technical responses with accurate Python examples.
+- Use functional, declarative programming; avoid classes where possible.
+- Prefer iteration and modularization over code duplication.
+- Use descriptive variable names with auxiliary verbs (e.g., is_valid, has_permission).
+- Use lowercase with underscores for file names (e.g., user_commands.py).
+- Favor named exports for commands and utility functions.
+- Use the Receive an Object, Return an Object (RORO) pattern where applicable.
+
+Python/Typer
+- Use @app.command() decorator for defining commands.
+- Use type hints for all function parameters. Typer uses these for automatic argument parsing and validation.
+- File structure: main CLI entry point, sub-commands, utilities, static content, custom types.
+- Use Typer's Option and Argument classes for defining command-line parameters.
+- Implement callback functions for complex option handling.
+- Use Typer's Context object for sharing data between commands.
+
+Error Handling and Validation
+- Prioritize error handling and edge cases:
+  - Handle errors and edge cases at the beginning of command functions.
+  - Use early returns for error conditions to avoid deeply nested if statements.
+  - Place the happy path last in the function for improved readability.
+  - Avoid unnecessary else statements; use the if-return pattern instead.
+  - Use guard clauses to handle preconditions and invalid states early.
+  - Implement proper error logging and user-friendly error messages.
+  - Use Typer's built-in error handling mechanisms (e.g., typer.BadParameter, typer.Abort).
+
+Dependencies
+- Typer
+- Colorama (for cross-platform colored terminal text)
+- Rich (for rich text and beautiful formatting in the terminal)
+
+Typer-Specific Guidelines
+- Use functional components (plain functions) with Typer decorators for command definitions.
+- Leverage Python type hints for automatic argument parsing and validation.
+- Use typer.Typer() to create the main application and sub-commands.
+- Implement custom types when built-in types are insufficient.
+- Use typer.echo() function for consistent output formatting.
+- Optimize for user experience using Typer's built-in progress bars, spinners, and colored output.
+- Use Typer's confirmation prompts for potentially destructive actions.
+- Implement "dry run" options for commands that modify data or perform critical operations.
+
+Performance Optimization
+- Minimize blocking I/O operations; use asynchronous operations for time-consuming tasks.
