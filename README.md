@@ -2,6 +2,8 @@
 
 A command-line expense tracking application built with Python and Typer that helps you manage your personal expenses efficiently.
 
+Created as part of the specification provided in https://roadmap.sh/projects/expense-tracker
+
 ## Introduction
 
 Expense Tracker CLI is a simple yet powerful tool that allows you to:
